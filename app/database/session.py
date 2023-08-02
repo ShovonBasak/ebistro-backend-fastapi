@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from app.config.settings import settings
 
 DATABASE_URL = (
-    f'postgresql://{settings.database_username}:{settings.database_password}@'
+    f'postgresql+asyncpg://{settings.database_username}:{settings.database_password}@'
     f'{settings.database_host}:{settings.database_port}/{settings.database_name}'
 )
 
